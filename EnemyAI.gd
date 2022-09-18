@@ -9,7 +9,8 @@ func _ready():
 
 func _physics_process(delta):
 	var target = agent.get_next_location()
-	var pos = get_global_position()
+	var pos = global_position
+	print(agent.get_nav_path())
 	
 	target_sprite.global_position = target
 	
